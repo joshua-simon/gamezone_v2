@@ -19,7 +19,6 @@ export default function Home(props) {
       data = {reviews}
       renderItem = {({item}) => (
         <TouchableOpacity onPress = {() => navigation.navigate('ReviewDetails', item)}>
-          {/* the second argument in navigate() represents the data sent to ReviewDetails */}
           <Text style = {globalStyles.title}>{item.title}</Text>
         </TouchableOpacity>
       )}
