@@ -1,21 +1,19 @@
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
-// import { NavigationContainer } from "@react-navigation/native";
 import About from '../screens/about'
+import Header from '../shared/header'
 
 const Stack = createStackNavigator()
 
-const AboutStack = () => {
+const AboutStack = ({navigation}) => {
     return(
-        // <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen 
                 name = 'AboutGameZone' 
                 component = {About}
-                options = {{title: 'About'}}
+                options = {{headerTitle: () =>  <Header navigation = {navigation}/>}}
                 />
             </Stack.Navigator>
-        // </NavigationContainer>
     )
 }
 
