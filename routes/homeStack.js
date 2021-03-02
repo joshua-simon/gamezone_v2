@@ -1,19 +1,19 @@
 import React from 'react'
 import { createStackNavigator } from "@react-navigation/stack";
-// import { NavigationContainer } from "@react-navigation/native";
 import Home from '../screens/home'
 import ReviewDetails from '../screens/reviewDetails'
+import Header from '../shared/header'
+
 
 const Stack = createStackNavigator()
 
 const Navigator = () => {
     return(
-        // <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen 
                 name = 'GameZone' 
                 component = {Home}
-                options = {{title: 'Game Zone'}}
+                options = {{headerTitle: () => <Header/>}}
                 />
                 <Stack.Screen 
                 name = 'ReviewDetails' 
@@ -21,7 +21,6 @@ const Navigator = () => {
                 options = {{title: 'Review details'}}
                 />
             </Stack.Navigator>
-        // </NavigationContainer>
     )
 }
 
