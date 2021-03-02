@@ -6,7 +6,7 @@ import { DrawerActions } from '@react-navigation/native'
 
 const Header = (props) => {
 
-    const { navigation } = props
+    const { navigation, title } = props
 
     const openMenu = () => {
         navigation.dispatch(DrawerActions.openDrawer())
@@ -21,7 +21,7 @@ const Header = (props) => {
             style = {styles.icon}
             />
             <View>
-                <Text style = {styles.headerText}>GameZone</Text>
+                <Text style = {styles.headerText}>{ title }</Text>
             </View>
         </View>
     )

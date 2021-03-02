@@ -5,13 +5,16 @@ import Header from '../shared/header'
 
 const Stack = createStackNavigator()
 
-const AboutStack = ({navigation}) => {
+const AboutStack = (props) => {
+
+    const { navigation } = props
+
     return(
             <Stack.Navigator>
                 <Stack.Screen 
                 name = 'AboutGameZone' 
                 component = {About}
-                options = {{headerTitle: () =>  <Header navigation = {navigation}/>}}
+                options = {{headerTitle: () =>  <Header navigation = {navigation} title = 'About GameZone'/>}}
                 />
             </Stack.Navigator>
     )

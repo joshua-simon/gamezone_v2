@@ -15,7 +15,8 @@ const Navigator = (props) => {
                 <Stack.Screen 
                 name = 'GameZone' 
                 component = {Home}
-                options = {{headerTitle: () => <Header navigation = {navigation}/>}}
+                options = {{headerTitle: () => <Header navigation = {navigation} title = 'GameZone'/>}}
+                title = 'GameZone'
                 />
                 <Stack.Screen 
                 name = 'ReviewDetails' 
