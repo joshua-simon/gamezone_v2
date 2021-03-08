@@ -11,7 +11,7 @@ export default function Home(props) {
     { title: 'Not So "Final" Fantasy', rating: 3, body: 'lorem ipsum', key: '3' },
   ]);
 
-  
+
   const { navigation } = props
 
   return (

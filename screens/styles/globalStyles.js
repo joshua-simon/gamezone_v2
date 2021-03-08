@@ -15,3 +15,7 @@ export const globalStyles = StyleSheet.create({
         lineHeight:20
     }
   })
+
+
+
+
